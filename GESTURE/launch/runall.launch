@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+	<node name ="turtlesim_node" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+	<node pkg="GESTURERECOGNITIONSMY" name="camera_out_cnt" type="new.py" output="screen"/>
+	<node name ="cnt_to_vel" pkg="GESTURERECOGNITIONSMY" type="cnt_to_vel" output="screen"/>
+	<node name="turtle1_tf_broadcaster" pkg="GESTURERECOGNITIONSMY" type="turtle_tf_broadcaster" args="/turtle1" />
+	<node name="turtle2_tf_broadcaster" pkg="GESTURERECOGNITIONSMY" type="turtle_tf_broadcaster" args="/turtle2" />
+	<node name="listener" pkg="GESTURERECOGNITIONSMY" type="turtle_tf_listener" />
+</launch> 
